@@ -1101,25 +1101,25 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>IList&lt;T&gt; Find&lt;T&gt;(string requete_hql)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">exécute la requête HQL et rend une liste d&#x27;objets de type T</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">exécute la requête HQL et rend une liste d&#x27;objets de type T</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>IList&lt;T&gt; Find&lt;T&gt;(string requete_hql, object[])
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">exécute une requête HQL paramétrée par des ?. Les valeurs de ces paramètres sont fournis par le tableau d&#x27;objets.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">exécute une requête HQL paramétrée par des ?. Les valeurs de ces paramètres sont fournis par le tableau d&#x27;objets.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>IList&lt;T&gt; LoadAll&lt;T&gt;()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">rend toutes les entités de type <i>T</i></p></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">rend toutes les entités de type <i>T</i></div></td></tr></table>
 
 <p>Il existe d&#x27;autres méthodes utiles que nous n&#x27;aurons pas l&#x27;occasion d&#x27;utiliser qui permettent de retrouver, sauvegarder, mettre à jour et supprimer des entités :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>T Load&lt;T&gt;(object id)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">met dans la session NHibernate l&#x27;entité de type T ayant la clé primaire <i>id</i>. </p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">met dans la session NHibernate l&#x27;entité de type T ayant la clé primaire <i>id</i>. </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">void</span><span class="w"> </span><span class="n">SaveOrUpdate</span><span class="p">(</span><span class="k">object</span><span class="w"> </span><span class="n">entité</span><span class="p">)</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">insère (INSERT) ou met à jour (UPDATE) l&#x27;objet <i>entité</i> selon que celui-ci a une clé primaire (UPDATE) ou non (INSERT). L&#x27;absence de clé primaire peut être configuré par l&#x27;attribut <i>unsaved-values</i> du fichier de configuration de l&#x27;entité. Après l&#x27;opération <i>SaveOrUpdate</i>, l&#x27;objet <i>entité</i> est dans la session NHibernate.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">insère (INSERT) ou met à jour (UPDATE) l&#x27;objet <i>entité</i> selon que celui-ci a une clé primaire (UPDATE) ou non (INSERT). L&#x27;absence de clé primaire peut être configuré par l&#x27;attribut <i>unsaved-values</i> du fichier de configuration de l&#x27;entité. Après l&#x27;opération <i>SaveOrUpdate</i>, l&#x27;objet <i>entité</i> est dans la session NHibernate.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ow">void</span><span class="w"> </span><span class="nx">Delete</span><span class="p">(</span><span class="nx">object</span><span class="w"> </span><span class="nx">entité</span><span class="p">)</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">supprime l&#x27;objet <i>entité</i> de la session NHibernate.</p></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">supprime l&#x27;objet <i>entité</i> de la session NHibernate.</div></td></tr></table>
 
 <p><a id="refheading2522281168461456"></a></p>
 <h4 id="2153-implementation-de-la-methode-init">2.1.5.3. Implémentation de la méthode init</h4>
